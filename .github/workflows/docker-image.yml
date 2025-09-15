@@ -1,4 +1,4 @@
-name: Deploy Release
+name: image-bulid_push
 
 on:
   # اجرای خودکار روی کامیت release روی develop
