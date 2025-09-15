@@ -49,12 +49,3 @@ jobs:
           IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/my-flask-app
           docker push $IMAGE_NAME:latest
           docker push $IMAGE_NAME:${{ env.VERSION }}
-      # ایجاد Release در GitHub
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ env.VERSION }}
-          name: Release ${{ env.VERSION }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
